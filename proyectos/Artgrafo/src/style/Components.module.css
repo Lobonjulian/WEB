@@ -1,8 +1,8 @@
 .grid {
+  padding: 1rem 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 2rem;
-  padding: 1rem 0;
 }
 
 .grid > * {
@@ -13,32 +13,107 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: var(--bg-200);
+  background-color: var(--bg-100);
   border-radius: 8px;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(29, 53, 87, 0.12);
+  }
+}
+
+.card:hover .image {
+  transform: scale(1.03);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(29, 53, 87, 0.85);
+  opacity: 0;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.overlay[open],
+.overlay:has(+ *) {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Soporte para navegadores sin :has() */
+.overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal {
+  max-width: 95vw;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  background-color: var(--bg-200);
+  transform: translateY(20px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(29, 53, 87, 0.12);
+.overlay.open .modal {
+  transform: translateY(0);
+}
+
+.closeButton {
+  position: absolute;
+  top: 0;
+  left: 1.2rem;
+  background: none;
+  border: none;
+  font-size: 2.2rem;
+  color: var(--text-200);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  border: 1px solid red;
+}
+
+.closeButton:hover {
+  color: var(--primary-100);
+  background-color: rgba(255, 111, 97, 0.1);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
 }
 
 .imageWrapper {
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
+  flex: 1;
+  min-height: 300px;
 }
 
 .image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
-  transition: transform 0.5s ease;
 }
 
-.card:hover .image {
-  transform: scale(1.03);
-}
+
 
 .info {
   padding: 1.2rem;
@@ -72,4 +147,50 @@
   .grid > * {
     min-width: auto;
   }
+}
+
+@media (min-width: 769px) {
+  .content {
+    flex-direction: row;
+  }
+
+  .imageWrapper {
+    flex: 2;
+    min-height: auto;
+  }
+
+  .info {
+    flex: 1;
+    padding: 2rem;
+  }
+}
+
+/* Estilos para la información (ya los tienes en ArtworkInfo.module.css, 
+   pero los incluyo aquí por si quieres ajustar el modal específicamente) */
+.info {
+  padding: 1.5rem;
+  background-color: white;
+}
+
+.title {
+  font-family: var(--title-font);
+  font-size: 2rem;
+  color: var(--primary-300);
+  margin: 0 0 0.75rem 0;
+  line-height: 1.2;
+}
+
+.meta {
+  font-family: var(--body-font);
+  font-size: 1.1rem;
+  color: var(--text-200);
+  margin: 0 0 1rem 0;
+}
+
+.description {
+  font-family: var(--body-font);
+  font-size: 1.15rem;
+  color: var(--text-100);
+  line-height: 1.7;
+  margin: 0;
 }

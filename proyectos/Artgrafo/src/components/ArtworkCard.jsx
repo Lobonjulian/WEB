@@ -1,22 +1,22 @@
 import styles from "../style/Components.module.css";
+import ArtworkImage from "./ArtworkImage";
+import ArtworkInfo from "./ArtworkInfo";
 
-const ArtworkCard = ({ artwork }) => {
+const ArtworkCard = ({ artwork, onClick }) => {
   return (
-    <article className={styles.card}>
-      <div className={styles.imageWrapper}>
-        <img
-          src={artwork.image}
-          alt={artwork.title}
-          className={styles.image}
-          loading="lazy"
-        />
-      </div>
-      <div className={styles.info}>
-        <h3 className={styles.title}>{artwork.title}</h3>
-        <p className={styles.artist}>
-          {artwork.artist} • {artwork.year}
-        </p>
-      </div>
+    <article
+      className={styles.card}
+      onClick={onClick}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === "enter" || e.key === "") {
+          onClick?.();
+        }
+      }}
+    >
+      <ArtworkImage artwork={artwork} variant="card" />
+      <ArtworkInfo artwork={artwork} variant="card" />
     </article>
   );
 };
