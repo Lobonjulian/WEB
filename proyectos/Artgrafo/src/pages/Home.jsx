@@ -1,13 +1,16 @@
 import GalleryGrid from "../components/GalleryGrid";
 
+import "../style/Page.module.css";
+
 const Home = () => {
   return (
-    <div>
-      <h1>ArtGrafo</h1>
-      <p>Bienvenido a mi galería de arte moderno y contemporáneo.</p>
-      <h3>en construcción 🎨</h3>
+    <main>
+      <div>
+        <h1>Un espacio para el arte moderno y contemporáneo</h1>
+        <p>Conectando artistas con coleccionistas globalmente</p>
+      </div>
       <GalleryGrid />
-    </div>
+    </main>
   );
 };
 

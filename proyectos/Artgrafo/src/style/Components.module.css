@@ -165,8 +165,6 @@
   }
 }
 
-/* Estilos para la información (ya los tienes en ArtworkInfo.module.css, 
-   pero los incluyo aquí por si quieres ajustar el modal específicamente) */
 .info {
   padding: 1.5rem;
   background-color: white;
@@ -193,4 +191,109 @@
   color: var(--text-100);
   line-height: 1.7;
   margin: 0;
+}
+
+.form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(29, 53, 87, 0.08);
+}
+
+.field {
+  margin-bottom: 1.5rem;
+}
+
+.field label {
+  display: block;
+  font-family: var(--title-font);
+  font-size: 1.1rem;
+  color: var(--text-100);
+  margin-bottom: 0.5rem;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-family: var(--body-font);
+  font-size: 1rem;
+  border: 1px solid var(--bg-300);
+  border-radius: 4px;
+  background-color: var(--bg-100);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--primary-200);
+  box-shadow: 0 0 0 3px rgba(221, 81, 71, 0.15);
+}
+
+.errorInput {
+  border-color: #e74c3c !important;
+  background-color: #fdf2f2;
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+  font-family: var(--body-font);
+}
+
+.submitButton {
+  width: 100%;
+  padding: 0.9rem;
+  font-family: var(--title-font);
+  font-size: 1.1rem;
+  color: white;
+  background-color: var(--primary-200);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submitButton:hover {
+  background-color: var(--primary-100);
+}
+
+.success {
+  text-align: center;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(29, 53, 87, 0.08);
+}
+
+.success h3 {
+  color: var(--primary-200);
+  margin-bottom: 1rem;
+}
+
+.success p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-100);
+}
+
+.backButton {
+  font-family: var(--title-font);
+  font-size: 1rem;
+  color: var(--primary-200);
+  background: none;
+  border: 2px solid var(--primary-200);
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.backButton:hover {
+  background-color: var(--primary-200);
+  color: white;
 }
