@@ -15,6 +15,20 @@
 
   --transition-ui: 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --transition-focus: 0.15s ease;
+
+  --bg-page: var(--bg-100);
+  --bg-card: white;
+  --text-primary: var(--text-100);
+  --text-secondary: var(--text-200);
+  --border-color: var(--bg-300);
+}
+
+[data-theme="dark"] {
+  --bg-page: #0f172a;
+  --bg-card: #1e293b;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --border-color: #334155;
 }
 
 *,
@@ -26,8 +40,8 @@
 }
 
 body {
-  background-color: var(--bg-100);
-  color: var(--text-100);
+  background-color: var(--bg-page);
+  color: var(--text-primary);
   font-family: var(--body-font);
   font-weight: 450;
   font-size: 1rem;

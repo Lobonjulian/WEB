@@ -297,3 +297,99 @@
   background-color: var(--primary-200);
   color: white;
 }
+
+.favoriteButton {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: rgba(255, 255, 255, 0.92);
+  border: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: 
+    all var(--transition-ui),
+    background-color 0.15s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+[data-theme="dark"] .favoriteButton {
+  background: rgba(30, 41, 59, 0.85);
+}
+
+.favoriteButton:hover {
+  transform: scale(1.12) rotate(12deg);
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] .favoriteButton:hover {
+  background: #334155;
+}
+
+.favoriteButton:active {
+  transform: scale(0.95);
+}
+
+/* Transición suave para el cambio de emoji */
+.favoriteButton span {
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.favoriteButton:hover span {
+  transform: scale(1.1);
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-family: var(--title-font);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.select {
+  font-family: var(--body-font);
+  font-size: 1rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236b5b95' viewBox='0 0 16 16'%3e%3cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+  cursor: pointer;
+  transition: 
+    border-color var(--transition-focus),
+    box-shadow var(--transition-focus);
+}
+
+.select:focus {
+  outline: none;
+  border-color: var(--primary-200);
+  box-shadow: 0 0 0 3px rgba(221, 81, 71, 0.15);
+}
+
+.select:hover {
+  border-color: var(--primary-100);
+}
+
+/* Modo oscuro: flecha más clara */
+[data-theme="dark"] .select {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2394a3b8' viewBox='0 0 16 16'%3e%3cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3e%3c/svg%3e");
+}

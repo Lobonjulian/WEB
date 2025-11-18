@@ -73,7 +73,14 @@ const ContactForm = () => {
     );
   }
   return (
-    <form onSubmit={handleSubmit} className={styles.form}>
+    <form
+      onSubmit={handleSubmit}
+      className={styles.form}
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
       <div className={styles.field}>
         <label htmlFor="name">Nombre *</label>
         <input
