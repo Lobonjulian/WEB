@@ -1,4 +1,5 @@
 import Logo from "../UI/Logo";
+
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {

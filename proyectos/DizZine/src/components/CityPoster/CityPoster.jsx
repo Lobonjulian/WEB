@@ -1,10 +1,19 @@
-import { useState } from "react";
-import styles from "./CityPoster.module.css";
+import { useEffect, useState } from "react";
 import useDominantColor from "../../hook/useDominantColor";
 
-const CityPoster = ({ city }) => {
+import styles from "./CityPoster.module.css";
+
+const CityPoster = ({ city, onColorExtracted, isActive }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const dominantColor = useDominantColor(imageLoaded ? city.imageUrl : null);
+
+  // Pasar el color a la App cuando este poster está activo
+  useEffect(() => {
+    if (isActive && imageLoaded && dominantColor && onColorExtracted) {
+      console.log("Color extraído y pasado a App:", dominantColor);
+      onColorExtracted(dominantColor);
+    }
+  }, [isActive, imageLoaded, dominantColor, onColorExtracted]);
 
   const handleImageLoad = () => {
     setImageLoaded(true);
@@ -13,32 +22,34 @@ const CityPoster = ({ city }) => {
   return (
     <section
       className={styles.poster}
-      style={{ backgroundColor: imageLoaded ? dominantColor : "#2c3e50" }}
+      style={{ backgroundColor: imageLoaded ? dominantColor : "#26a2d2" }}
     >
-      <div className={styles.poster__container}>
-        <div className={styles.poster__header}>
+      <div className={styles.posterContainer}>
+        <div className={styles.posterHeader}>
           <span className={styles.population}>{city.population}</span>
         </div>
 
-        <div className={styles.poster__image}>
+        <div className={styles.posteImage}>
           <img
             src={city.imageUrl}
             alt={`${city.cityName}, ${city.department}`}
-            className={styles.poster__image__img}
+            className={styles.posteImage__img}
             loading="lazy"
             onLoad={handleImageLoad}
           />
         </div>
 
-        <div className={styles.poster__info}>
-          <h3 className={styles.poster__info__title}>{city.cityName}</h3>
-          <p>{city.department}</p>
-          <p>Población aprox: {city.population}</p>
+        <div className={styles.posterInfo}>
+          <h3 className={styles.posterInfo__title}>{city.cityName}</h3>
+          <p className={styles.posterInfo__description}>{city.department}</p>
+          <p className={styles.posterInfo__description}>
+            Población aprox: {city.population}
+          </p>
         </div>
 
-        <div className={styles.poster__footer}>
+        <div className={styles.posterFooter}>
           <button className={styles.btn}>Publicar aquí</button>
-          <p>
+          <p className={styles.posterInfo__description}>
             o edita <a>aquí</a>
           </p>
         </div>
