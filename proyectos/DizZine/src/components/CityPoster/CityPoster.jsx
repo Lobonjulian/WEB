@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import useDominantColor from "../../hook/useDominantColor";
+import useDominantColor from "@hook/useDominantColor";
 
 import styles from "./CityPoster.module.css";
 
@@ -10,7 +10,6 @@ const CityPoster = ({ city, onColorExtracted, isActive }) => {
   // Pasar el color a la App cuando este poster está activo
   useEffect(() => {
     if (isActive && imageLoaded && dominantColor && onColorExtracted) {
-      console.log("Color extraído y pasado a App:", dominantColor);
       onColorExtracted(dominantColor);
     }
   }, [isActive, imageLoaded, dominantColor, onColorExtracted]);
@@ -22,7 +21,7 @@ const CityPoster = ({ city, onColorExtracted, isActive }) => {
   return (
     <section
       className={styles.poster}
-      style={{ backgroundColor: imageLoaded ? dominantColor : "#26a2d2" }}
+      style={{ backgroundColor: imageLoaded ? dominantColor : "#de3e28" }}
     >
       <div className={styles.posterContainer}>
         <div className={styles.posterHeader}>

@@ -2,19 +2,115 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  padding-inline: 1rem;
+  padding-inline: 1.5rem 2rem;
+  z-index: 100;
 }
 
-.footer__container {
+.footerContainer {
   margin: 0 auto;
   max-width: 1440px;
   display: flex;
   justify-content: space-between;
+  gap: 2rem;
 }
 
-.footer__legal {
+.footerLegal {
   max-width: 27.35rem;
+  flex: 1;
+
   p {
     text-wrap: pretty;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    opacity: 0.9;
+  }
+}
+
+.privacyLink {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+}
+
+.footerNav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  min-width: 300px;
+}
+
+.footerNavigation {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.btnCity {
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+}
+
+.activeBtnCity {
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navNumber {
+  font-size: 0.75rem;
+  opacity: 0.9;
+  min-width: 1rem;
+  text-align: center;
+}
+
+.navCity {
+  white-space: nowrap;
+}
+
+   
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 1rem;
+  }
+  
+  .navCity {
+    display: none;
+  }
+  
+  .btnCity {
+    padding: 0.4rem 0.8rem;
+    min-width: 36px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footerNavigation {
+    gap: 0.25rem;
+  }
+  
+  .btnCity {
+    padding: 0.3rem 0.6rem;
+    min-width: 32px;
   }
 }

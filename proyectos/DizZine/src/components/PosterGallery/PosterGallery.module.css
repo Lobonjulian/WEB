@@ -26,57 +26,14 @@
   }
 }
 
-.galleryNavigation {
-  position: fixed;
-  left: 30px;
-  top: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  transform: translateY(-50%);
-  z-index: 10;
-}
-
-.dot {
-  padding: 8px 12px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: none;
-  border: none;
-  border-radius: 20px;
-  color: rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  &:hover {
-    color: rgba(255, 255, 255, 0.8);
-    background: rgba(255, 255, 255, 0.1);
-  }
-}
-
-.dotCity {
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  white-space: nowrap;
-}
-
-.activeDot {
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.15);
-}
-
-.activeDot .dotCity {
-  font-weight: bold;
-}
-
 .galleryVertical {
   height: 100%;
-  flex: 1;
+  width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
+  scroll-snap-stop: always;
 
   &::-webkit-scrollbar {
     display: none;
@@ -86,57 +43,73 @@
   scrollbar-width: none;
 }
 
-.posterWrapper {
-  padding: 20px;
-  height: 100vh;
-  width: 100%;
-  scroll-snap-align: start;
+.posterWrapper,
+.progressIndicator {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-sizing: border-box;
+}
 
-  &:hover {
-    transform: none;
-  }
+.posterWrapper {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .progressIndicator {
   position: fixed;
-  right: 20px;
+  right: 30px;
   top: 50%;
+  flex-direction: column;
+  gap: 15px;
   transform: translateY(-50%);
-  width: 4px;
-  height: 200px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 2px;
-  z-index: 10;
+  z-index: 100;
 }
 
-.progressBar {
-  width: 100%;
-  background: linear-gradient(45deg, #ffffff, #e74c3c);
+.progressTrack {
+  position: relative;
+  width: 4px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 2px;
-  transition: height 0.3s ease;
+  overflow: hidden;
+}
+
+.progressFill {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-radius: 2px;
+  background: linear-gradient(45deg, #ffffff, #e74c3c);
   box-shadow: 0 0 10px rgba(231, 76, 60, 0.5);
+  transition: height 0.3s ease;
+}
+
+.progressText {
+  padding: 4px 8px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
 }
 
 @media (max-width: 768px) {
-  .galleryNavigationDots {
-    left: 15px;
-  }
-
-  .dotCity {
-    display: none;
-  }
-
-  .verticalGallery {
-    margin-left: 60px;
-    gap: 20px;
-    padding: 20px 10px;
-  }
-
   .progressIndicator {
-    right: 10px;
+    right: 15px;
+  }
+
+  .progressTrack {
+    height: 150px;
+  }
+
+  .progressText {
+    font-size: 0.7rem;
   }
 }

@@ -1,10 +1,5 @@
-export const citiesData = [
-  {
-    cityName: "Base",
-    imageUrl: "assets/image/Base.avif",
-    backgroundColor: "#29a2d3",
-  },
-  {
+export const citiesData = [ 
+ {
     cityName: "Bogota",
     department: "Distrito Capital",
     population: 7878783,

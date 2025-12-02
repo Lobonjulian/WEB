@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const useDominantColor = (imageUrl) => {
-  const [dominantColor, setDominantColor] = useState("#29a2d3");
+  const [dominantColor, setDominantColor] = useState("#de3e28");
 
   useEffect(() => {
     if (!imageUrl) return;
