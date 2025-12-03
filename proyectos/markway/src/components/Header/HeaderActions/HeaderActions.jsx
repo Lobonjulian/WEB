@@ -1,5 +1,5 @@
 import { headerButtons } from "../navigationData.js";
-import Button from "../../common/Button/Button";
+import Button from "@common/Button/Button";
 
 import styles from "./HeaderActions.module.css";
 

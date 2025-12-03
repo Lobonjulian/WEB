@@ -2,3 +2,11 @@
   display: flex;
   gap: 1rem;
 }
+
+@media (max-width: 768px) {
+  .headerActions {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+}

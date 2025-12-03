@@ -1,14 +1,40 @@
 .headerNav {
   display: flex;
-  gap: 2rem;
+}
 
+.headerNavList {
+  display: flex;
+  gap: 1rem;
+}
+
+.headerNavLink {
+  text-decoration: none;
+  color: black;
+}
+
+.headerNavItem {
+  display: flex;
+  align-items: center;
+}
+
+.headerNavLink {
+  position: relative;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .headerNav {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
   .headerNavList {
-    display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 0;
   }
-
-  .headerNavLink {
-    text-decoration: none;
-    color: black;
-  }
+  
 }
