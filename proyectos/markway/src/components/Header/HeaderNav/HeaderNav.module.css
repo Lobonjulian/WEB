@@ -1,0 +1,14 @@
+.headerNav {
+  display: flex;
+  gap: 2rem;
+
+  .headerNavList {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .headerNavLink {
+    text-decoration: none;
+    color: black;
+  }
+}
