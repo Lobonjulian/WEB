@@ -1,0 +1,29 @@
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}
+
+.placeholder {
+  padding: 4rem 0;
+  text-align: center;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.placeholder h2 {
+  color: #2a5caa;
+  margin-bottom: 1rem;
+}
+
+.placeholder p {
+  color: #6c757d;
+}
