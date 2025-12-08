@@ -1,3 +1,7 @@
+import Consejo from "../assets/image/Combinaciones de Colores para Marketing Visual.avif";
+import Plantillas from "../assets/image/plantillas de redes.avif";
+import Combinaciones from "../assets/image/Combinaciones de Colores para Marketing Visual.avif";
+
 export const resources = [
   {
     id: 1,
@@ -41,18 +45,16 @@ export const collections = [
   {
     id: 1,
     title: "Planillas para Redes Sociales",
-    image: "../assets/image/plantillas de redes.avif",
+    image: Plantillas,
   },
   {
     id: 2,
     title: "Combinaciones de Colores para Marketing Visual",
-    image:
-      "../assets/image/Combinaciones de Colores para Marketing Visual.avif",
+    image: Combinaciones,
   },
   {
     id: 3,
     title: "Consejos para Marketing en Redes",
-    image:
-      "../assets/image/Combinaciones de Colores para Marketing Visual.avif",
+    image: Consejo,
   },
 ];

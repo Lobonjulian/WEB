@@ -24,7 +24,7 @@
   padding: 0.5rem;
   background: none;
   border: none;
-  color: #2a5caa;
+  color: var(--accent-100);
   cursor: pointer;
   z-index: 1001;
 }
@@ -58,7 +58,7 @@
     right: -100%;
     width: 280px;
     height: 100vh;
-    background: white;
+    background: var(--primary-300);
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;

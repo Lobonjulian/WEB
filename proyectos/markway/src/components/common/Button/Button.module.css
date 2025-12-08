@@ -17,9 +17,11 @@
 }
 
 .primary {
-  background-color: aqua;
+  background-color: var(--accent-100);
+  color: var(--accent-200);
 }
 
 .outline {
+  color: var(--accent-100);
   background-color: transparent;
 }

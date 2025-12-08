@@ -1,0 +1,18 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.search {
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid var(--bg-200);
+  box-shadow: 0 2px 8px  rgba(0, 0, 0, 0.05);
+}
+
+.searchContainer {
+  margin-bottom: 1.5rem;
+}
+

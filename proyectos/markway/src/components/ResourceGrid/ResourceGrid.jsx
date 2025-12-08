@@ -4,7 +4,6 @@ const ResourceGrid = ({
   items,
   title = "Recursos Destacados",
   subtitle,
-  emptyMessage = "No hay elementos disponibles",
   renderItem,
 }) => {
   if (!items || items.length === 0) {
@@ -12,7 +11,9 @@ const ResourceGrid = ({
       <section className={styles.gridSection}>
         <div className={styles.container}>
           <h2 className={styles.sectionTitle}>{title}</h2>
-          <p className={styles.emptyMessage}>{emptyMessage}</p>
+          <p className={styles.emptyMessage}>
+            {"No hay elementos disponibles"}
+          </p>
         </div>
       </section>
     );

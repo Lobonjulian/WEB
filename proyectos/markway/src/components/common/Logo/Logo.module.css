@@ -12,5 +12,5 @@
 .logoText {
   font-weight: bold;
   font-size: clamp(0.5rem, -1rem + 24vw, 1.5rem);
-  color: #8a2be2; 
+  color: var(--accent-100); 
 }

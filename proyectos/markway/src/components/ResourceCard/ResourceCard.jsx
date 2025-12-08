@@ -38,7 +38,7 @@ const ResourceCard = ({ item, type = "resource" }) => {
             />
             {type === "collection" && isHovered && (
               <div className={styles.imageOverlay}>
-                <span className={styles.overlayText}>Ver {type}</span>{" "}
+                <span className={styles.overlayText}>Ver {type}</span>
               </div>
             )}
           </>
