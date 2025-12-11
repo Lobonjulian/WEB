@@ -1,0 +1,30 @@
+.btn {
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    transform: translateY(-4px);
+  }
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.btn--primary {
+  padding: 0.5rem 1rem;
+  background-color: #006241;
+  &:hover {
+    background-color: #79eec7;
+  }
+}
+
+.btn--ghost {
+  background: transparent;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:active {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+}

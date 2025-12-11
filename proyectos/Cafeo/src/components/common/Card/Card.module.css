@@ -1,0 +1,25 @@
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card--row {
+  flex-direction: row;
+}
+
+.card__img,
+.card__number {
+  border-radius: 999rem;
+}
+
+.card__number {
+  font-weight: bold;
+  &:hover {
+  padding: 0.25rem 0.5rem;
+    border: 1px solid green;
+  }
+}

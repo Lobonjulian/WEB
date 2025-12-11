@@ -1,0 +1,14 @@
+.reward {
+  text-align: center;
+}
+
+.reward__stars {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.reward__content {
+  display: none;
+}

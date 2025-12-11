@@ -1,0 +1,29 @@
+.nav {
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu,
+.menu__nav,
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.logo {
+  height: 26.73px;
+  width: auto;
+}
+
+.link {
+  color: #0b630b;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #a52a2a;
+  }
+}
