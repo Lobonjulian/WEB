@@ -1,0 +1,15 @@
+{
+  "name": "Cafeo Rewards",
+  "short_name": "Cafeo",
+  "description": "Café gratis a un toque de distancia",
+  "theme_color": "#7a9b48",
+  "background_color": "#f3e8d3",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/cafeo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

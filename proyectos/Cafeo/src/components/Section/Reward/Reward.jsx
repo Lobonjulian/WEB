@@ -1,6 +1,5 @@
 import styles from "./Reward.module.css";
 
-// En Reward.jsx - datos más descriptivos
 const rewards = [
   {
     id: 1,

@@ -1,4 +1,5 @@
 import Button from "../../common/Button/Button";
+
 import styles from "./Hero.module.css";
 
 const Hero = ({ image }) => {
@@ -15,11 +16,7 @@ const Hero = ({ image }) => {
       </div>
       {image && (
         <div className={styles.hero__image}>
-          <img
-            src={image}
-            alt="placeholder"
-            loading="lazy"
-          />
+          <img src={image} alt="placeholder" loading="lazy" />
         </div>
       )}
     </section>

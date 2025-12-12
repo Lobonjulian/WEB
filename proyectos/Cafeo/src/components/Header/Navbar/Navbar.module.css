@@ -1,0 +1,27 @@
+.navbar,
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.menu__link {
+  color: var(--bg-300);
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--coffee-dark);
+  }
+}
+
+.menu__linkActive {
+  color: var(--coffee-dark);
+}
+
+@media (max-width: 768px) {
+  .navbar,
+  .menu {
+    flex-direction: column;
+  }
+}

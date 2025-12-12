@@ -6,10 +6,11 @@
 
 .feature__title {
   margin-bottom: 2rem;
-  justify-content: center;
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
+
   p {
     max-width: 672px;
   }

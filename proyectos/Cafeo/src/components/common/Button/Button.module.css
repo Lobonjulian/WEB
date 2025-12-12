@@ -1,8 +1,11 @@
 .btn {
+  font-family: var(--font-cuerpo);
+  color: var(--bg-300);
   border: none;
   border-radius: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
+
   &:hover {
     transform: translateY(-4px);
   }
@@ -13,17 +16,21 @@
 
 .btn--primary {
   padding: 0.5rem 1rem;
-  background-color: #006241;
+  font-weight: bold;
+  background-color: var(--coffee-green);
+
   &:hover {
-    background-color: #79eec7;
+    background-color: var(--coffee-yellow);
   }
 }
 
 .btn--ghost {
   background: transparent;
+
   &:hover {
     text-decoration: underline;
   }
+
   &:active {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }

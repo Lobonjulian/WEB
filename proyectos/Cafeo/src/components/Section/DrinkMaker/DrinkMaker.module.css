@@ -1,6 +1,6 @@
 .drinkMaker {
   padding: 4rem 2rem;
-  background-color: #c8ebe3;
+  background-color: var(--bg-200);
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -29,12 +29,12 @@
 }
 
 .drinkMaker__card {
-  background: white;
+  background: var(--coffee-light);
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
-  
+
   &:hover {
     transform: translateY(-5px);
   }
@@ -47,12 +47,12 @@
 
 .drinkMaker__cardTitle {
   font-size: 1.25rem;
-  color: #006241;
+  color: var(--coffee-green);
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
 .drinkMaker__cardDescription {
-  color: #666;
+  color: var(--text-200);
   line-height: 1.5;
 }

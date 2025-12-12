@@ -1,7 +1,43 @@
+:root {
+  --coffee-green: #7a9b48;
+  --coffee-yellow: #d8b863;
+  --coffee-light: #c7a17a;
+  --coffee-dark: #4a2e14;
+  --coffee-french: #1f0f07;
+
+  --accent-100: #5c5c5c;
+  --accent-200: #8b5e34;
+
+  --text-100: #3d332b;
+  --text-200: #7a6c5f;
+
+  --bg-100: #f3e8d3;
+  --bg-200: #e8f5e9;
+  --bg-300: #005100;
+
+  --font-cuerpo: "Kanit";
+  --font-title: "against";
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-100);
+  color: var(--text-100);
+  font-family: var(--font-cuerpo);
 }
 
 ul {
@@ -11,4 +47,44 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-title);
+  text-wrap: balance;
+}
+
+p,
+a,
+span,
+button {
+  font-family: var(--font-cuerpo);
+  text-wrap: pretty;
+}
+
+@font-face {
+  font-family: "Kanit";
+  src: url("assets/fonts/Kanit-Regular.woff2") format("woff2"),
+    url("assets/fonts/Kanit-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.logo-accent-2 {
+  fill: #487874;
+}
+
+@font-face {
+  font-family: "against";
+  src: url("assets/fonts/against-Regular.woff2") format("woff2"),
+    url("assets/fonts/against-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }

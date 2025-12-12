@@ -1,0 +1,28 @@
+.logo {
+  display: inline-block;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.logo__img {
+  height: 26.73px;
+  width: auto;
+  transition: filter 0.3s ease;
+}
+
+.logo:hover .logo__img {
+  filter: brightness(1.1);
+}
+
+.logo__fallback {
+  padding: 0.15rem;
+  font-family: var(--font-title);
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: var(--coffee-yellow);
+  border: 2px solid var(--coffee-green);
+  border-radius: 0.5rem;
+}

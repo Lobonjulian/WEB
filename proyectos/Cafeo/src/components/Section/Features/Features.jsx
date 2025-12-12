@@ -1,4 +1,5 @@
 import Card from "../../common/Card/Card";
+
 import styles from "./Features.module.css";
 
 const Features = ({ title, description, items = [] , variant}) => {

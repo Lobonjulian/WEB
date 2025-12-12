@@ -1,4 +1,8 @@
-import Button from "../common/Button/Button";
+import { useState } from "react";
+import HamburgerButton from "./HamburgerButton/HamburgerButton.jsx";
+import HeaderActions from "./HeaderActions/HeaderActions";
+import Navbar from "./Navbar/Navbar";
+
 import styles from "./Header.module.css";
 
 const navItem = [
@@ -8,27 +12,33 @@ const navItem = [
 ];
 
 const Header = () => {
-  return (
-    <nav className={styles.nav}>
-      <section className={styles.menu}>
-        <div className={styles.menu__logo}>
-          <img className={styles.logo} src="/cafeo.svg" alt="Cafeo" />
-        </div>
-        <ul className={styles.menu__nav}>
-          {navItem.map((item) => (
-            <li key={item.id}>
-              <a href={item.href} className={styles.link}>{item.label}</a>
-            </li>
-          ))}
-        </ul>
-      </section>
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-      <section className={styles.actions}>
-        <Button variant={"ghost"}>Buscar una tienda</Button>
-        <Button variant={"ghost"}>Iniciar sesión</Button>
-        <Button>Unirse ahora</Button>
-      </section>
-    </nav>
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  return (
+    <>
+      <nav className={styles.nav}>
+        <Navbar menuItem={navItem} />
+        <div className={styles.navDesktop}>
+          <HeaderActions />
+        </div>
+
+        <HamburgerButton
+          isOpen={isMenuOpen}
+          onClick={toggleMenu}
+          ariaLabel={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
+        />
+
+        {isMenuOpen && (
+          <div className={styles.navMobile}>
+            <HeaderActions />
+          </div>
+        )}
+      </nav>
+    </>
   );
 };
 
