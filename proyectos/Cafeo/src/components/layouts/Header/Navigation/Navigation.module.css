@@ -1,4 +1,7 @@
-.navbar,
+.navigation {
+  margin-left: 0.35rem;
+}
+
 .menu {
   display: flex;
   align-items: center;
@@ -16,12 +19,18 @@
 }
 
 .menu__linkActive {
+  padding-bottom: 0.5rem;
   color: var(--coffee-dark);
+  border-bottom: 1px solid var(--coffee-dark);
 }
 
 @media (max-width: 768px) {
-  .navbar,
+  .navigation {
+    margin:0 0 2rem;
+  }
+
   .menu {
     flex-direction: column;
+    gap: 0.25rem;
   }
 }

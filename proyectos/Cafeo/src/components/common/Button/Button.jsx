@@ -1,16 +1,21 @@
 import styles from "./Button.module.css";
 
 const Button = ({
-  variant = "primary",
-  type = "button",
-  onClick,
+  ariaLabel,
   children,
+  disabled = false,
+  onClick,
+  type = "button",
+  variant = "primary",
+  className = "",
 }) => {
   return (
     <button
       type={type}
-      className={`${styles.btn} ${styles[`btn--${variant}`]}`}
+      className={`${styles.btn} ${styles[`btn--${variant}`]} ${className}`}
       onClick={onClick}
+      disabled={disabled}
+      aria-label={ariaLabel}
     >
       {children}
     </button>

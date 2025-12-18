@@ -4,21 +4,37 @@
   align-items: center;
   flex-direction: column;
   gap: 0.5rem;
+  border-radius: 1rem;
+  background-color: var(--bg-100);
+  text-align: center;
 }
 
 .card--row {
   flex-direction: row;
 }
 
-.card__img,
-.card__number {
-  border-radius: 999rem;
+.card__media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.card__number {
-  font-weight: bold;
-  &:hover {
-    padding: 0.25rem 0.5rem;
-    border: 1px solid var(--coffee-french);
-  }
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card__title {
+  font-size: clamp(1.25rem, 2.1875rem + -8.3333vw, 0.625rem);
+  font-weight: 700;
+}
+
+.card__description {
+  font-size: clamp(0.625rem, 0.1563rem + 4.1667vw, 0.95rem);
+  color: var(--accent-100);
+}
+
+.card__actions {
+  margin-top: auto;
 }

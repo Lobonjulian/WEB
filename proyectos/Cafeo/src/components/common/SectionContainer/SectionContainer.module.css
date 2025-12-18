@@ -1,0 +1,34 @@
+.sectionContainer {
+  margin-block: 4rem;
+  padding-inline: 1rem;
+}
+
+.sectionContainer--highlight {
+  padding-block: 3rem;
+  background-color: var(--bg-200);
+}
+
+.sectionContainer--compact {
+  margin-block: 2rem;
+}
+
+.sectionContainer__header {
+  margin:0 auto 2rem;
+  max-width: 720px;
+  text-align: center;
+}
+
+.sectionContainer__title {
+  font-size: clamp(1.25rem, 1.0455rem + 1.0909vw, 2rem);
+}
+
+.sectionContainer__subtitle {
+  font-size: clamp(0.85rem, 0.7167rem + 0.7111vw, 1.25rem);
+  line-height: 1.25;
+}
+
+.sectionContainer__content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+

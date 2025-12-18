@@ -1,3 +1,4 @@
+import SectionContainer from "@common/SectionContainer/SectionContainer";
 import styles from "./DrinkMaker.module.css";
 
 const customizations = [
@@ -29,7 +30,11 @@ const customizations = [
 
 const DrinkMaker = () => {
   return (
-    <section className={styles.drinkMaker}>
+    <SectionContainer
+      title="Personaliza tu bebida"
+      subtitle="Haz tu bebida justo como te gusta con un shot extra de espresso, leche de almendra o un toque de tu sabor favorito."
+      variant="compact"
+    >
       <div className={styles.drinkMaker__grid}>
         {customizations.map((item) => (
           <div key={item.id} className={styles.drinkMaker__card}>
@@ -41,15 +46,7 @@ const DrinkMaker = () => {
           </div>
         ))}
       </div>
-
-      <div className={styles.drinkMaker__header}>
-        <h2 className={styles.drinkMaker__title}>Personaliza tu bebida</h2>
-        <p className={styles.drinkMaker__description}>
-          Haz tu bebida justo como te gusta con un shot extra de espresso, leche
-          de almendra o un toque de tu sabor favorito.
-        </p>
-      </div>
-    </section>
+    </SectionContainer>
   );
 };
 

@@ -1,8 +1,9 @@
-import Button from "../../common/Button/Button";
+import Button from "@common/Button/Button";
+import TazaCafe from "@assets/image/tazaCafe.webp";
 
 import styles from "./Hero.module.css";
 
-const Hero = ({ image }) => {
+const Hero = () => {
   return (
     <section className={styles.hero}>
       <div className={styles.hero__content}>
@@ -14,11 +15,10 @@ const Hero = ({ image }) => {
           una mejor experiencia
         </p>
       </div>
-      {image && (
-        <div className={styles.hero__image}>
-          <img src={image} alt="placeholder" loading="lazy" />
-        </div>
-      )}
+
+      <div className={styles.hero__image}>
+        <img src={TazaCafe} alt="Taza de cafe" loading="lazy" />
+      </div>
     </section>
   );
 };

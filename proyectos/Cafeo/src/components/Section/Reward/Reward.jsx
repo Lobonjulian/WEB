@@ -1,3 +1,4 @@
+import SectionContainer from "@common/SectionContainer/SectionContainer";
 import styles from "./Reward.module.css";
 
 const rewards = [
@@ -35,10 +36,8 @@ const rewards = [
 
 const Reward = () => {
   return (
-    <section className={styles.reward}>
-      <h3 className={styles.reward__title}>Obtén tus favoritos gratis</h3>
-
-      <div className={styles.reward__stars}>
+    <SectionContainer title="Obtén tus favoritos gratis" variant="reward">
+      <div className={styles.reward__grid}>
         {rewards.map((reward) => (
           <div key={reward.id} className={styles.reward__items}>
             <div>
@@ -53,7 +52,7 @@ const Reward = () => {
           </div>
         ))}
       </div>
-    </section>
+    </SectionContainer>
   );
 };
 

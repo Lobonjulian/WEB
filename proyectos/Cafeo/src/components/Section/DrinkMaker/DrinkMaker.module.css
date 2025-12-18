@@ -6,20 +6,6 @@
   gap: 2rem;
 }
 
-.drinkMaker__header {
-  max-width: 800px;
-  margin: 0 auto 3rem;
-}
-
-.drinkMaker__title {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.drinkMaker__description {
-  font-size: 1.1rem;
-}
-
 .drinkMaker__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));

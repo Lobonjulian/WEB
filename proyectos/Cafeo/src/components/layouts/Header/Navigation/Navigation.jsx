@@ -1,18 +1,21 @@
 import { NavLink } from "react-router-dom";
-import Logo from "@common/Logo/Logo";
 
-import styles from "./Navbar.module.css";
+import styles from "./Navigation.module.css";
 
-const Navbar = ({ menuItem }) => {
+const Navigation = ({ items, onNavigate }) => {
+  const handleClick = () => {
+    if (onNavigate) {
+      onNavigate;
+    }
+  };
   return (
-    <section className={styles.navbar}>
-      <Logo />
-
+    <nav className={styles.navigation}>
       <ul className={styles.menu}>
-        {menuItem.map((item) => (
+        {items.map((item) => (
           <li key={item.id} className={styles.menu__item}>
             <NavLink
               to={item.href}
+              onClick={handleClick}
               className={({ isActive }) =>
                 `${styles.menu__link} ${
                   isActive ? styles.menu__linkActive : ""
@@ -24,8 +27,8 @@ const Navbar = ({ menuItem }) => {
           </li>
         ))}
       </ul>
-    </section>
+    </nav>
   );
 };
 
-export default Navbar;
+export default Navigation;

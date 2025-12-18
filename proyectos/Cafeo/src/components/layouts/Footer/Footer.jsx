@@ -40,7 +40,7 @@ const footerSections = [
 ];
 
 const Footer = () => {
-  const date = new Date().getFullYear()
+  const date = new Date().getFullYear();
   return (
     <footer className={styles.footer}>
       <div className={styles.footer__main}>
@@ -61,19 +61,30 @@ const Footer = () => {
       </div>
 
       <div className={styles.footer__bottom}>
+        <div className={styles.footer__social}>
+          <a
+            href="#"
+            aria-label="Facebook"
+            className={styles.footer__socialIcon}
+          >
+            <span>f</span>           </a>
+          <a
+            href="#"
+            aria-label="Instagram"
+            className={styles.footer__socialIcon}
+          >
+            <span>ig</span> 
+          </a>
+          <a
+            href="#"
+            aria-label="Twitter"
+            className={styles.footer__socialIcon}
+          >
+            <span>𝕏</span> 
+          </a>
+        </div>
         <div className={styles.footer__copyright}>
           © 2023 - {date} Cafeo. Todos los derechos reservados.
-        </div>
-        <div className={styles.footer__legal}>
-          <a href="#" className={styles.footer__legalLink}>
-            Términos de uso
-          </a>
-          <a href="#" className={styles.footer__legalLink}>
-            Política de privacidad
-          </a>
-          <a href="#" className={styles.footer__legalLink}>
-            Preferencias de cookies
-          </a>
         </div>
       </div>
     </footer>

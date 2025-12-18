@@ -1,30 +1,17 @@
-import Button from "../Button/Button";
 import styles from "./Card.module.css";
 
-const Card = ({
-  title,
-  description,
-  imagen,
-  number,
-  button = false,
-  variant,
-}) => {
+const Card = ({ title, description, media, actions, variant }) => {
   return (
-    <aside className={`${styles.card} ${styles[`card--${variant}`]}`}>
-        {imagen ? (
-          <img
-            src={imagen}
-            alt={title}
-            loading="lazy"
-            className={styles.card__img}
-          />
-        ) : (
-          <span className={styles.card__number}>{number}</span>
-        )}
+    <article className={`${styles.card} ${styles[`card--${variant}`]}`}>
+      {media && <div className={styles.card__media}>{media}</div>}
+
+      <div className={styles.card__content}>
         <h4 className={styles.card__title}>{title}</h4>
         <p className={styles.card__description}>{description}</p>
-        {button && <Button variant="ghost">Saber mas</Button>}
-    </aside>
+      </div>
+
+      {actions && <div className={styles.card__actions}>{actions}</div>}
+    </article>
   );
 };
 

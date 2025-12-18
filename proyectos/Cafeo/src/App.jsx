@@ -1,38 +1,17 @@
-import { featuresData, features } from "./data/featuresData";
-import { payment, paymentItems } from "./data/paymentData";
-import { steps, stepsData } from "./data/stepsData";
-import Features from "./components/Section/Features/Features";
-import Header from "./components/Header/Header";
-import Hero from "./components/Section/Hero/Hero";
-import Reward from "./components/Section/Reward/Reward";
-import DrinkMaker from "./components/Section/DrinkMaker/DrinkMaker";
-import Footer from "./components/Footer/Footer";
+import { Routes, Route } from "react-router-dom";
+import GiftCardPage from "@/pages/GiftCardPage";
+import Home from "@/pages/Home";
+import MenuPage from "@/pages/MenuPage";
+import RewardsPage from "@/pages/RewardsPage";
 
 function App() {
   return (
-    <>
-      <Header />
-      <Hero image={"https://placehold.co/200x200?text=Cafeo&font=Oswald"} />
-      <Features
-        title={steps.title}
-        description={steps.description}
-        items={stepsData}
-      />
-      <Reward />
-      <DrinkMaker />
-      <Features
-        title={features.title}
-        description={features.description}
-        items={featuresData}
-      />
-      <Features
-        title={payment.title}
-        description={payment.description}
-        items={paymentItems}
-        variant="row"
-      />
-      <Footer />
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/reward" element={<RewardsPage />} />
+      <Route path="/menu" element={<MenuPage />} />
+      <Route path="/gift-card" element={<GiftCardPage />} />
+    </Routes>
   );
 }
 
