@@ -3,17 +3,18 @@
   right: 10px;
   width: 30px;
   height: 20px;
-  padding: 1rem;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* background: transparent; */
+  background: transparent;
   border-radius: 0.5rem;
   transition: transform 0.4s ease, opacity 0.2s ease;
 
   &:hover {
     opacity: 0.7;
     transform: scale(1.05);
+    background-color: transparent;
   }
 
   &:active {
@@ -22,7 +23,7 @@
 }
 
 .hamburger__line {
-  width: 100%;
+  width: 24px;
   height: 3px;
   background: var(--coffee-dark);
   border-radius: 4px;

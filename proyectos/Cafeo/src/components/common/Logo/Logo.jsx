@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
-import styles from "./Logo.module.css";
+import styles from './Logo.module.css';
 
 const Logo = () => {
   const [imgError, setImgError] = useState(false);

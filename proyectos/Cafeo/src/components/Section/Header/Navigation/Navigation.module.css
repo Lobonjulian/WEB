@@ -19,14 +19,14 @@
 }
 
 .menu__linkActive {
-  padding-bottom: 0.5rem;
+  padding-bottom: 1px;
   color: var(--coffee-dark);
   border-bottom: 1px solid var(--coffee-dark);
 }
 
 @media (max-width: 768px) {
   .navigation {
-    margin:0 0 2rem;
+    margin: 0 0 2rem;
   }
 
   .menu {

@@ -1,21 +1,18 @@
 import { stepsSection, benefitsSection, paymentSection } from '@/data/home';
-import DrinkMaker from '@/components/Section/DrinkMaker/DrinkMaker';
+import DrinkMaker from '@/components/section/DrinkMaker/DrinkMaker';
 import Features from '@/components/common/Features/Features';
-import Hero from '@/components/Section/Hero/Hero';
-import Header from '@/components/Layouts/Header/Header ';
-import Footer from '@/components/Layouts/Footer/Footer ';
+import Hero from '@/components/section/Hero/Hero';
+import Reward from '@/components/section/Reward/Reward';
 
 const Home = () => {
   return (
     <>
-      <Header />
       <Hero />
       <Features section={stepsSection} />
       <Reward />
       <DrinkMaker />
       <Features section={benefitsSection} />
       <Features section={paymentSection} />
-      <Footer />
     </>
   );
 };

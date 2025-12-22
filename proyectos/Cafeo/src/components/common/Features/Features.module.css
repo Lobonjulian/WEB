@@ -8,18 +8,18 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
-  border: 1px solid red;
 }
 
 .feature--row {
-  padding-bottom: 0.5rem;
   display: flex;
+  flex-direction: column;
+  gap: 3rem;
   scroll-snap-type-x: mandatory;
   overflow-x: auto;
 }
 
-.feature--row > * {
-  flex: 0 0 280px;
+.feature--row>* {
+  flex: 0 0 20px;
   scroll-snap-align: start;
 }
 
@@ -30,6 +30,7 @@
 
 .card__number {
   font-weight: bold;
+
   &:hover {
     padding: 0.25rem 0.5rem;
     border: 1px solid var(--coffee-french);
@@ -37,7 +38,7 @@
 }
 
 @media (max-width: 768px) {
-  .feature--grid {
+  .feature--rid {
     grid-template-columns: 1fr;
   }
 }

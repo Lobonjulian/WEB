@@ -1,17 +1,7 @@
 .drinkMaker {
-  padding: 4rem 2rem;
-  background-color: var(--bg-200);
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-.drinkMaker__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 0.5rem;
-  max-width: 500px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
 .drinkMaker__card {
@@ -41,4 +31,54 @@
 .drinkMaker__cardDescription {
   color: var(--text-200);
   line-height: 1.5;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.step__title {
+  font-size: clamp(1.25rem, 1.0455rem + 1.0909vw, 2rem);
+  font-weight: 600;
+  color: var(--coffee-dark);
+}
+
+.step__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+}
+
+.step__item {
+  width: 120px;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: var(--coffee-light);
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px var(--coffee-dark);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.step__item--active {
+  background-color: var(--coffee-green);
+}
+
+.step__item__icon {
+  font-size: 2rem;
+}
+
+.step__item__label {
+  font-size: 1rem;
+  color: var(--text-200);
 }

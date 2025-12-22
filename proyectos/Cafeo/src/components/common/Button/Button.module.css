@@ -9,6 +9,7 @@
   &:hover {
     transform: translateY(-4px);
   }
+
   &:active {
     transform: translateY(0);
   }

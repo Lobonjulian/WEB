@@ -1,13 +1,13 @@
-import styles from "./Button.module.css";
+import styles from './Button.module.css';
 
 const Button = ({
   ariaLabel,
   children,
   disabled = false,
   onClick,
-  type = "button",
-  variant = "primary",
-  className = "",
+  type = 'button',
+  variant = 'primary',
+  className = '',
 }) => {
   return (
     <button

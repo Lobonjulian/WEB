@@ -1,8 +1,8 @@
-import Card from "@common/Card/Card";
-import SectionContainer from "@common/SectionContainer/SectionContainer";
-import { adapterFeatureCard } from "./FeatureCardAdapter";
+import Card from '@common/Card/Card';
+import SectionContainer from '@common/SectionContainer/SectionContainer';
+import { adapterFeatureCard } from './FeatureCardAdapter';
 
-import styles from "./Features.module.css";
+import styles from './Features.module.css';
 
 const Features = ({ section }) => {
   const { meta, items } = section;

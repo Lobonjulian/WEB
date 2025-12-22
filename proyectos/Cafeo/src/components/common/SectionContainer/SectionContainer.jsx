@@ -1,10 +1,10 @@
-import styles from "./SectionContainer.module.css";
+import styles from './SectionContainer.module.css';
 
 const SectionContainer = ({ title, subtitle, variant, children }) => {
   return (
     <section
       className={`${styles.sectionContainer} ${
-        variant ? styles[`sectionContainer--${variant}`] : ""
+        variant ? styles[`sectionContainer--${variant}`] : ''
       }`}
       data-variant={variant}
     >

@@ -1,5 +1,5 @@
 const GiftCardPage = () => {
-    return <div>Gift Card Page</div>
-}
+  return <div>Gift Card Page</div>;
+};
 
-export default GiftCardPage
+export default GiftCardPage;
